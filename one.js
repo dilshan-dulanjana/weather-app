@@ -107,8 +107,7 @@ document.getElementById("searchBtn").addEventListener("click", () => {
             document.getElementById("fa").innerHTML = data.current.temp_f;
             var imgElement = document.getElementById("img");
             imgElement.src = data.current.condition.icon;
-            var imgElement = document.getElementById("pho");
-            imgElement.src = data.current.condition.icon;
+   
             document.getElementById("humidity").innerHTML = data.current.humidity;
             document.getElementById("wind_speedkm").innerHTML = data.current.wind_kph;
             document.getElementById("wind_speedmp").innerHTML = data.current.wind_mph;
@@ -214,20 +213,6 @@ document.getElementById("searchBtn").addEventListener("click", () => {
                 })
 
 
-            fetch(`http://api.weatherapi.com/v1/forecast.json?key=50ca2f80d6ce427c991152958240303&q=${searchVal}&days=12`, reop)
-                .then(response => response.json())
-                .then(forecastData => {
-
-                    document.getElementById("Time6").innerHTML = forecastData.forecast.forecastday[0].hour[0].time;
-                    var imgElement1 = document.getElementById("p6");
-                    imgElement1.src = forecastData.forecast.forecastday[0].hour[0].condition.icon;
-                    document.getElementById("c6").innerHTML = forecastData.forecast.forecastday[0].hour[0].temp_c;
-                    document.getElementById("wind6").innerHTML = forecastData.forecast.forecastday[0].hour[0].wind_kph;
-
-
-
-
-                })
 
 
 
